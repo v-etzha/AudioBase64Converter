@@ -3,11 +3,11 @@ using System.IO;
 
 namespace AudioBase64Converter
 {
-    class Program
-    {
-    static void Main(string[] args)
-        {
-			string filePath = @"C:\Users\Ethan\Desktop\AudioSource\convert.wav";
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			string filePath = @"C:\Users\Ethan\Desktop\AudioSource\test.webm";
 			try
 			{
 				using (FileStream fsRead = new FileStream(filePath, FileMode.Open))
@@ -22,13 +22,13 @@ namespace AudioBase64Converter
 					//byte[] fileByte = new byte[fileStream.Length];
 					//string base64Str = Convert.ToBase64String(fileByte);
 					//int r = fileStream.Read(fileByte, 0, (int)fileStream.Length);					
-					File.WriteAllText(@"C:\Users\Ethan\Desktop\convertwavbase64.txt", base64Str);
+					File.WriteAllText(@"C:\Users\Ethan\Desktop\AudioSource\testwebmbase64.txt", base64Str);
 				}
 			}
 			catch (IOException e)
 			{
 				throw e;
 			}
-        }
-    }
+		}
+	}
 }
